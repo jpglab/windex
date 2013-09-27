@@ -1,4 +1,5 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+from index.models import Event, Gift
 
 def index(request):
-  return HttpResponse('<h2>Welcome to Windex!</h2><br/>This is the index app\'s root url.')
+  return render(request, 'index/index.html')

@@ -1,4 +1,7 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+from gallery.models import Image
 
 def gallery(request):
-  return HttpResponse('Welcome to the gallary app!')
+  #images = Image.objects.all()
+  #template = 
+  return render(request, 'gallery/gallery.html')
