@@ -1,4 +1,4 @@
 from django.http import HttpResponse
 
-def gallary(request):
+def gallery(request):
   return HttpResponse('Welcome to the gallary app!')
