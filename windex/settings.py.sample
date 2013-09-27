@@ -113,15 +113,8 @@ WSGI_APPLICATION = 'windex.wsgi.application'
 TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths. 
-
-    # The main templates directory.
     '../windex/templates',
 
-    # The index application's templates.
-    '../windex/index/templates',
-
-    # The gallery applications's templates.
-    '../windex/gallery/templates',
 )
 
 INSTALLED_APPS = (
