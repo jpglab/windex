@@ -6,7 +6,7 @@ class Event(models.Model):
   address = models.CharField(max_length='100')
   info = models.TextField()
 
-class Gift(models.Model):
+class Registry(models.Model):
   store = models.CharField(max_length='32')
   url = models.URLField()
   info = models.TextField()
