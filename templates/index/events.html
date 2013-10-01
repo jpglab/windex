@@ -1,0 +1,17 @@
+
+{% block body  %}
+{ if event_list }
+  <div class="event_list">
+    { for e in event_list }
+    <div class="event">
+    <p>{{ e.date_time }}</p>
+    <p>{{ e.title }}</p>
+    <p>{{ e.address }}</p>
+    <p>{{ e.info }}</p>
+    </div>
+  </div>
+{ else }
+  <p>No events found :(</p>
+{ endif }
+{% endblock %}
+
