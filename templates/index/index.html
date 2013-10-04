@@ -8,7 +8,7 @@ function countdown(){
   var M = moment.duration(diff).months();
   var d = moment.duration(diff).days();
   var h = moment.duration(diff).hours();
-  var m = moment.duration(diff).minuets();
+  var m = moment.duration(diff).minutes();
   var s = moment.duration(diff).seconds();
   var cdiv = document.getElementById("countdown");
   cdiv.innerHTML = "<table>"
@@ -24,6 +24,7 @@ function countdown(){
                     +"<td>Months</td>"
                     +"<td>Days</td>"
                     +"<td>Hours</td>"
+                    +"<td>Minutes</td>"
                     +"<td>Seconds</td>"
                     +"</tr>"
                     +"</tbody>"
