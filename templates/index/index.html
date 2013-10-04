@@ -1,1 +1,36 @@
 {% extends "base.html"  %}
+{% block script %}
+<script language="javascript">
+function countdown(){
+  var now = moment();
+  var wedding = moment([2014, 8, 6]);
+  var diff = wedding.diff(now);
+  var m = moment.duration(diff).months();
+  var d = moment.duration(diff).days();
+  var h = moment.duration(diff).hours();
+  var s = moment.duration(diff).seconds();
+  var cdiv = document.getElementById("countdown");
+  cdiv.innerHTML = "<table>"
+                    +"<tbody>"
+                    +"<tr>"
+                    +"<td class=\"big\">"+m+"</td>"
+                    +"<td class=\"big\">"+d+"</td>"
+                    +"<td class=\"big\">"+h+"</td>"
+                    +"<td class=\"big\">"+s+"</td>"
+                    +"</tr>"
+                    +"<tr>"
+                    +"<td>Months</td>"
+                    +"<td>Days</td>"
+                    +"<td>Hours</td>"
+                    +"<td>Seconds</td>"
+                    +"</tr>"
+                    +"</tbody>"
+                    +"</table>";
+} 
+var i = setInterval(countdown, 1000);
+</script>
+{% endblock %}
+{% block content%}
+<div id="countdown"> </div>
+{% endblock %}
+
