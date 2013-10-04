@@ -3,12 +3,14 @@
   <head>
     <title>{% block title  %}Windex{% endblock %}</title>
     <link rel="stylesheet" href="../static/css/style.css" />
+    <script src="../static/js/moment.min.js"></script>
+    {% block script %}{% endblock %}
   </head>
   <body>
     <div id="container">
       <div id="header">
       {% block header %}
-      <img src="../static/img/header.jpg" />
+        <h1 class="cursive">The Hamaker Gagala Wedding</h1>
       {% endblock %}
       </div>
       <div id="navigation">
@@ -23,15 +25,10 @@
       </div>
       <div id="content">
       {% block content %}
-        <h1>This is an h1</h1>
-        <h2>This is an h2</h2>
-        <h3>This is an h3</h3>
-        <p>This is a paragraph</p>
       {% endblock %}
       </div>
       <div id="footer">
       {% block footer %}
-        <p>This is the footer</p>
       {% endblock %}
       </div>
     </div>
