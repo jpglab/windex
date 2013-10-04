@@ -1,17 +1,36 @@
-<!-- The top of the templating hieratchy -->
 <!DOCTYPE html>
 <html>
   <head>
     <title>{% block title  %}Windex{% endblock %}</title>
     <link rel="stylesheet" href="../static/css/style.css" />
+    <script src="../static/js/moment.min.js"></script>
+    {% block script %}{% endblock %}
   </head>
   <body>
-  {% block body %}
-    <h1>Windex 0.1</h1>
-    <h2>This is an h2</h2>
-    <h3>This is an h3</h3>
-    <h4>This is an h4</h4>
-    <p>This is a paragraph</p>
-  {% endblock %}
+    <div id="container">
+      <div id="header">
+      {% block header %}
+        <h1 class="cursive">The Hamaker Gagala Wedding</h1>
+      {% endblock %}
+      </div>
+      <div id="navigation">
+      {% block navigation %}
+        <ul class="menu">
+          <li>Home</li>
+          <li>The Wedding</li>
+          <li>Photos</li>
+          <li>Registry</li>
+        </ul>
+      {% endblock %}
+      </div>
+      <div id="content">
+      {% block content %}
+      {% endblock %}
+      </div>
+      <div id="footer">
+      {% block footer %}
+      {% endblock %}
+      </div>
+    </div>
   </body>
 </html>
