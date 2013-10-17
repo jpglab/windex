@@ -1,17 +1,39 @@
-
-{% block body  %}
-{ if event_list }
-  <div class="event_list">
-    { for e in event_list }
+{% extends "base.html"  %}
+{% block content %}
+{% if event_list %}
+  <div id="event-list">
+  {% for e in event_list %}
     <div class="event">
-    <p>{{ e.date_time }}</p>
-    <p>{{ e.title }}</p>
-    <p>{{ e.address }}</p>
-    <p>{{ e.info }}</p>
+      <div class="event-info">
+        <h1>{{ e.title }}</h1>
+        <h3>Date</h3>
+        <p>{{ e.date_time }}</p>
+        <h3>Address</h3>
+        <p> 
+        {{ e.address_name }}
+        <br>{{ e.street  }}
+        <br>{{ e.city }}, {{ e.state }} {{ e.zip }} 
+        <br>{{ e.phone }}
+        </p>
+        <h3>Info</h3>
+        <p>{{ e.info }}</p>
+      </div>
+      <div class="map">
+        {% autoescape off %}
+        {{ e.map }}
+        {% endautoescape %}
+      </div>
+    <br class="clear" />
     </div>
+    {% if forloop.revcounter > 1 %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+    <br class="clear" />
   </div>
-{ else }
-  <p>No events found :(</p>
-{ endif }
+{% else %}
+<p>No events found.</p>
+{% endif %}
 {% endblock %}
-
+{% block my_scripts %}
+{% endblock %}
