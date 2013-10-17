@@ -1,0 +1,15 @@
+{% extends "base.html"  %}
+{% block content %}
+{% if event_list %}
+  <div id="registry-list">
+    {% for r in reg_list %}
+    <div class="registry">
+      This will be a registry entry.
+    </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <p>No events found :(</p>
+{% endif %}
+{% endblock %}
+
