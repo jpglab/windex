@@ -60,7 +60,8 @@ table td:first-child {
 
 #date { 
   /*display: inline;*/
-  font-size: 112px;
+  text-align: center;
+  font-size: 96px;
 }
 
 #navigation {
@@ -78,6 +79,11 @@ table td:first-child {
 
 #footer {
   text-align: center;
+}
+
+#event-list {
+  margin: 10px 0;
+  background-color: none; 
 }
 
 .big { 
@@ -112,4 +118,14 @@ table td:first-child {
 
 .menu li:first-child {
   padding-left: 0;
+}
+
+.event-info {
+  float: left; 
+  background-color: none; 
+}
+
+.map {
+  float: right;
+  background-color: none; 
 }
