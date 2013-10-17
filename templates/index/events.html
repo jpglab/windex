@@ -1,24 +1,39 @@
 {% extends "base.html"  %}
 {% block content %}
+{% if event_list %}
   <div id="event-list">
+  {% for e in event_list %}
     <div class="event">
       <div class="event-info">
-        <h1>The Wedding</h1>
+        <h1>{{ e.title }}</h1>
         <h3>Date</h3>
-        <p>September 6th, 2014 at 12:00pm</p>
+        <p>{{ e.date_time }}</p>
         <h3>Address</h3>
-        <p>
-        Chicago Marriott Naperville<br />
-        1801 N. Naper Blvd. Naperville, IL 60563<br /> 
-        630-505-4900<br />
+        <p> 
+        {{ e.address_name }}
+        <br>{{ e.street  }}
+        <br>{{ e.city }}, {{ e.state }} {{ e.zip }} 
+        <br>{{ e.phone }}
         </p>
+        <h3>Info</h3>
+        <p>{{ e.info }}</p>
       </div>
       <div class="map">
-        <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Chicago+Marriott+Naperville++1801+N.+Naper+Blvd.+Naperville,+IL+60563++630-505-4900&amp;aq=&amp;sll=39.766555,-86.441277&amp;sspn=8.729253,16.907959&amp;t=h&amp;ie=UTF8&amp;hq=Chicago+Marriott+Naperville++1801+N.+Naper+Blvd.+Naperville,+IL+60563++630-505-4900&amp;hnear=&amp;ll=41.803613,-88.121545&amp;spn=0.004135,0.008256&amp;z=14&amp;iwloc=A&amp;cid=2284974701370817655&amp;output=embed"></iframe><br /><small><a href="https://www.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Chicago+Marriott+Naperville++1801+N.+Naper+Blvd.+Naperville,+IL+60563++630-505-4900&amp;aq=&amp;sll=39.766555,-86.441277&amp;sspn=8.729253,16.907959&amp;t=h&amp;ie=UTF8&amp;hq=Chicago+Marriott+Naperville++1801+N.+Naper+Blvd.+Naperville,+IL+60563++630-505-4900&amp;hnear=&amp;ll=41.803613,-88.121545&amp;spn=0.004135,0.008256&amp;z=14&amp;iwloc=A&amp;cid=2284974701370817655" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+        {% autoescape off %}
+        {{ e.map }}
+        {% endautoescape %}
       </div>
+    <br class="clear" />
     </div>
+    {% if forloop.revcounter > 1 %}
+      <hr>
+    {% endif %}
+  {% endfor %}
     <br class="clear" />
   </div>
+{% else %}
+<p>No events found.</p>
+{% endif %}
 {% endblock %}
 {% block my_scripts %}
 {% endblock %}
