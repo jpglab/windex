@@ -82,8 +82,7 @@ table td:first-child {
 }
 
 #event-list {
-  margin: 10px 0;
-  background-color: none; 
+  margin: 10px 10px;
 }
 
 .big { 
@@ -122,10 +121,23 @@ table td:first-child {
 
 .event-info {
   float: left; 
-  background-color: none; 
+}
+
+.event-info p {
+  margin: 0 0 10px 0;
+}
+
+.event-info h1 {
+  margin: 0 0 15px 0;
+  text-decoration: underline;
+}
+
+.event-info h2 {
+  margin: 0 0 10px 0;
 }
 
 .map {
   float: right;
-  background-color: none; 
 }
+
+.clear { clear: both; }
