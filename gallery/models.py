@@ -3,6 +3,7 @@ from django.db import models
 class Album(models.Model):
   name = models.CharField(max_length=100, blank=False)
   description = models.TextField()
+  thumb = models.ImageField(upload_to='images/album-thumbs/', name='Thumb', null=False)
 
   def __unicode__(self):
     return self.name

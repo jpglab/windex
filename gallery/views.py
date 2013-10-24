@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from gallery.models import Image
+from gallery.models import Image, Album
 
 def gallery(request):
-  #images = Image.objects.all()
-  #template = 
-  return render(request, 'gallery/gallery.html')
+  album_list = Album.objects.all()
+  context = {'album_list': album_list}
+  return render(request, 'gallery/gallery.html', context)

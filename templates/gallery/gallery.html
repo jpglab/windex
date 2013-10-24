@@ -1,5 +1,19 @@
 {% extends "base.html"  %}
-
 {% block title %}Gallery{% endblock %}
-
-{% block body %}Welcome to the gallery.{% endblock %}
+{% block content %}
+{% if album_list %}
+  <div id="album-list">
+  {% for a in album_list %}
+    <div class="album">
+      <img class="thumb" src="{{MEDIA_URL}}images/album-thumbs/{{a.thumb}}" alt="{{a.name}}"/>
+      <h3>{{a.name}}</h3>
+      <p>{{a.description}}</p>
+    </div>
+{% endfor %}
+</div>
+{% else %}
+<p>No albums found.</p>
+{% endif %}
+{% endblock %}
+{% block my_scripts %}
+{% endblock %}
