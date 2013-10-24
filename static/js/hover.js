@@ -1,3 +1,3 @@
-$( ".hover" ).hover(function() {
-  $( ".hover" ).toggle();
+$( "#clock" ).hover(function() {
+  $( ".hover" ).toggle(); 
 });
