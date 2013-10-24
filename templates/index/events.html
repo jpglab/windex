@@ -1,12 +1,14 @@
 {% extends "base.html"  %}
 {% block title %}Events{% endblock %}
 {% block content %}
+<div id="countdown" class="hidden hover"> </div>
 {% if event_list %}
   <div id="event-list">
   {% for e in event_list %}
     <div class="event">
       <div class="event-info">
         <h1>{{ e.title }}</h1>
+        <hr>
         <h3>Date</h3>
         <p>{{ e.date_time }}</p>
         <h3>Address</h3>
@@ -35,6 +37,4 @@
 {% else %}
 <p>No events found.</p>
 {% endif %}
-{% endblock %}
-{% block my_scripts %}
 {% endblock %}

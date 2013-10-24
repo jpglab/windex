@@ -1,18 +1,17 @@
 {% extends "base.html"  %}
 {% block title %}Gallery{% endblock %}
 {% block content %}
+<div id="countdown" class="hidden hover"> </div>
 {% if album_list %}
   <div id="album-list">
   {% for a in album_list %}
     <div class="album">
       <img class="thumb" src="{{ a.album_image.url }}" alt="{{a.name}}"/>
-      <h3>{{a.name}}</h3> <p>{{a.description}}</p>
+      <h1>{{a.name}}</h1> <p>{{a.description}}</p>
     </div>
 {% endfor %}
 </div>
 {% else %}
 <p>No albums found.</p>
 {% endif %}
-{% endblock %}
-{% block my_scripts %}
 {% endblock %}
