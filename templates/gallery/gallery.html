@@ -5,7 +5,7 @@
   <div id="album-list">
   {% for a in album_list %}
     <div class="album">
-      <img class="thumb" src="{{MEDIA_URL}}images/album-thumbs/{{a.thumb}}" alt="{{a.name}}"/>
+      <img class="thumb" src="{{ a.key_image.url }}" alt="{{a.name}}"/>
       <h3>{{a.name}}</h3>
       <p>{{a.description}}</p>
     </div>
