@@ -2,11 +2,12 @@
 <html>
   <head>
     <title>{% block title  %}Windex{% endblock %}</title>
-    <link rel="stylesheet" href="../static/css/style.css" />
-    <script src="../static/js/moment.min.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css" />
     {% block script %}
+      <script src="/static/js/moment.min.js"></script>
       <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
       <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+      <script src="/static/js/billboard.js"></script>
     {% endblock %}
   </head>
   <body>
@@ -54,8 +55,8 @@
       </div>
     </div>
     {% block my_scripts %}
-    <script src="../../static/js/countdown.js"></script>
-    <script src="../../static/js/hover.js"></script>
+    <script src="/static/js/countdown.js"></script>
+    <script src="/static/js/hover.js"></script>
     {% endblock %}
   </body>
 </html>
