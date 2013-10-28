@@ -43,13 +43,16 @@ table td:first-child {
 }
 
 #header {
-  background-image: url(../img/header.jpg);
   height: 640px;
 }
 
 #header h1 {
   padding: 30px 0 0 0;
   text-align: center;
+}
+
+#content {
+  background-image: url('/static/img/furley.png');
 }
 
 #countdown {
