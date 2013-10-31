@@ -6,8 +6,9 @@
   <div id="album-list">
   {% for a in album_list %}
     <div class="album">
-      <img class="thumb" src="{{ a.album_image.url }}" alt="{{a.name}}"/>
-      <h1>{{a.name}}</h1> <p>{{a.description}}</p>
+      <img class="thumb" src="{{ a.album_image.url }}" alt="{{ a.name }}"/>
+      <h1><a href="/gallery/{{ a.name|lower }}">{{ a.name }}</a></h1> 
+      <p>{{a.description}}</p>
     </div>
 {% endfor %}
 </div>

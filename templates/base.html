@@ -3,30 +3,27 @@
   <head>
     <title>{% block title  %}Windex{% endblock %}</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    {% block script %}
-      <script src="/static/js/moment.min.js"></script>
       <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
       <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
       <script src="/static/js/billboard.js"></script>
+      <script src="/static/js/moment.min.js"></script>
+    {% block script %}
     {% endblock %}
   </head>
   <body>
     <div id="container">
       <div id="header">
-      {% block header %}
         <h1 class="cursive">The Hamaker-Gagala Wedding</h1>
+      {% block header %}
       {% endblock %}
       </div>
       <div id="navigation">
-      {% block navigation %}
         <ul class="menu">
           <li><a href="/">Home</a></li>
           <li><a href="/events/">The Wedding</a></li>
           <li><a href="/gallery/">Photos</a></li>
           <li><a href="/registry/">Registry</a></li>
         </ul>
-      {% endblock %}
-      {% block clock %}
       <!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
       <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
         <div id="clock">
@@ -42,7 +39,6 @@
           C88.061,31.691,68.309,11.939,44.03,11.939z M44.03,93.996c-20.968,0-38.026-17.059-38.026-38.026S23.062,17.943,44.03,17.943
           s38.026,17.059,38.026,38.026S64.998,93.996,44.03,93.996z"/>
           </svg>
-        {% endblock %}
         </div>
       </div>
       <div id="content">
@@ -54,9 +50,9 @@
       {% endblock %}
       </div>
     </div>
-    {% block my_scripts %}
     <script src="/static/js/countdown.js"></script>
     <script src="/static/js/hover.js"></script>
+    {% block my_scripts %}
     {% endblock %}
   </body>
 </html>
