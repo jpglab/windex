@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
-from gallery import views
+from gallery.views import gallery, album
 
 urlpatterns = patterns('',
-    # domain.com/gallery
-    url(r'^$', views.gallery, name='gallery'),
+    url(r'^$', gallery),
+    url(r'^(?P<req_album>.+)/', album),
 )
