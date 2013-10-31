@@ -1,0 +1,22 @@
+{% extends "base.html"  %}
+{% block script %}
+<script src="/static/js/lightbox-2.6.min.js"></script>
+<link href="/static/css/lightbox.css" rel="stylesheet" />
+{% endblock %}
+{% block title %}{{ album_name }}{% endblock %}
+{% block content %}
+<div id="countdown" class="hidden hover"> </div>
+{% if image_list %}
+  <div id="image-list">
+  {% for i in image_list %}
+    <div class="image data-lightbox">
+      <a href="{{ i.image_image.url }}" data-lightbox="album" title="{{ i.caption }}">
+        <img class="thumb" src="{{ i.image_thumb.url }}" alt="{{ i.caption }}"/>
+      </a>
+    </div>
+  {% endfor %}
+  </div>
+{% else %}
+<p>No images found.</p>
+{% endif %}
+{% endblock %}
